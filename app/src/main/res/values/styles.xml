@@ -1,0 +1,13 @@
+
+
+<resources>
+    <style name="Theme.UHC" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:fontFamily">sans</item>
+        <item name="android:colorAccent">#0866C6</item>
+        <item name="android:navigationBarColor">#101820</item>
+        <item name="android:statusBarColor">#0755A5</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:windowBackground">#F4F7FB</item>
+    </style>
+</resources>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="uhc_blue">#0866C6</color>
+    <color name="uhc_blue_dark">#0755A5</color>
+    <color name="uhc_background">#F4F7FB</color>
+    <color name="uhc_navy">#102D53</color>
+</resources>

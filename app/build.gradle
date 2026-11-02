@@ -1,0 +1,65 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.example.uhc'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId 'com.example.uhc'
+        minSdk 23
+        targetSdk 35
+        versionCode 1
+        versionName '1.0'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+
+    lint {
+        // Fail the build when Lint errors are found
+        abortOnError true
+
+        // Run Lint checks on release builds
+        checkReleaseBuilds true
+
+        // Keep warnings as warnings
+        warningsAsErrors false
+
+        // Record existing findings
+        baseline file("lint-baseline.xml")
+
+        // Configure severity for important Fragment-related checks
+        error 'CommitTransaction'
+        error 'ValidFragment'
+        error 'FragmentTagUsage'
+        error 'FragmentContainer'
+        error 'DetachAndAttachSameFragment'
+
+        // Treat these as warnings
+        warning 'NewApi'
+        warning 'InlinedApi'
+    }
+
+}
+
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.2.1'
+    implementation 'androidx.fragment:fragment:1.8.6'
+    implementation 'com.google.android.material:material:1.12.0'
+    // RecyclerView for displaying patient lists
+    implementation 'androidx.recyclerview:recyclerview:1.3.2'
+    implementation 'androidx.cardview:cardview:1.0.0'
+
+// Glide image loading library
+    implementation 'com.github.bumptech.glide:glide:4.16.0'
+
+// Glide annotation processor
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.16.0'
+}
